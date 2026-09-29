@@ -34,7 +34,7 @@ st.caption(
 # Load the cleaned property data from the project folder.
 
 project_root = Path(__file__).resolve().parents[2]
-data_path = project_root / "data" / "processed" / "df.pkl"
+data_path = project_root / "data" / "processed" / "df_analytical_module.pkl"
 
 with open(data_path, "rb") as file:
     df = pickle.load(file)
