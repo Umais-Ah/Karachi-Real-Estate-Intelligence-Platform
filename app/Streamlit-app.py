@@ -1,6 +1,6 @@
 import streamlit as st
 
-# Configure the Streamlit page metadata and initial layout.
+# Set the page title and layout.
 st.set_page_config(
     page_title="Karachi Real Estate AI",
     page_icon="🏠",
@@ -8,7 +8,7 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 
-# Keep the platform content in one place so the layout below stays reusable.
+# Keep the app sections together so the links are easy to update.
 MODULES = [
     {
         "icon": "📊",
@@ -49,7 +49,7 @@ PIPELINE = [
     ("ML & analytics", "Models power the predictions, charts and recommendations."),
 ]
 
-# Apply the shared visual design for the landing page.
+# Add the styles used by the landing page.
 st.markdown(
     """
     <style>
@@ -172,7 +172,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# Render the main introduction and primary actions.
+# Show the introduction and the two main actions.
 st.markdown(
     """
     <div class="hero">
@@ -195,7 +195,7 @@ with cta2:
     st.page_link(MODULES[2]["page"], label="Find properties", icon="🏠",
                  use_container_width=True)
 
-# Render links to the platform's main tools.
+# Add a card for each tool.
 st.markdown(
     '<div class="section-title">Explore the platform</div>'
     '<p class="section-lead">Three tools built on the same Karachi property data.</p>',
@@ -215,7 +215,7 @@ for col, m in zip(st.columns(3, gap="medium"), MODULES):
             )
             st.page_link(m["page"], label=m["cta"], use_container_width=True)
 
-# Show the main audiences supported by the platform.
+# Explain who the platform is useful for.
 st.markdown(
     '<div class="section-title">Who it\'s for</div>',
     unsafe_allow_html=True,
@@ -227,7 +227,7 @@ for col, (who, what) in zip(st.columns(3, gap="medium"), AUDIENCES):
             unsafe_allow_html=True,
         )
 
-# Explain the data and machine-learning workflow.
+# Summarize how the data becomes the final insights.
 st.markdown(
     '<div class="section-title">How it works</div>'
     '<p class="section-lead">From raw listings to the insights you see here.</p>',
@@ -240,7 +240,7 @@ for col, (i, (name, desc)) in zip(st.columns(4, gap="small"), enumerate(PIPELINE
             unsafe_allow_html=True,
         )
 
-# Add the closing guidance note.
+# Add a note about how the estimates should be interpreted.
 st.markdown(
     '<div class="note">Estimates and recommendations are based on historical '
     "listing data and are meant as guidance, not a formal valuation.</div>",
