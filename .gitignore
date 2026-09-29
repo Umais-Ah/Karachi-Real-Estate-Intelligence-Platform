@@ -1,0 +1,36 @@
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Packaging and test output
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter and local tooling
+.ipynb_checkpoints/
+.vscode/
+
+# Local secrets and environment files
+.env
+.env.*
+!.env.example
+
+# Streamlit local configuration and runtime files
+.streamlit/secrets.toml
+.streamlit/cache/
+
+# Generated reports and temporary files
+*.log
+*.tmp
+*.bak
