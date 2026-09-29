@@ -4,17 +4,13 @@ import pickle
 from pathlib import Path
 import pydeck as pdk
 import numpy as np
-import matplotlib.cm as mcm
 import matplotlib.colors as mcolors
+import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 import plotly.express as px
 
 def get_turbo_cmap():
-    """Return the Turbo colour map across older and newer Matplotlib versions."""
-    try:
-        return mcm.colormaps["turbo"]
-    except AttributeError:
-        return mcm.get_cmap("turbo")
+    return plt.get_cmap("turbo")
 
 # Configure the analytics page.
 
@@ -1026,8 +1022,6 @@ fig.update_traces(marker_size=3,line_width=1.5)
 
 st.plotly_chart(fig,use_container_width=True)
 import seaborn as sns
-import matplotlib.pyplot as plt 
-
 st.divider()
 
 st.subheader("📈 Distribution Analysis")
