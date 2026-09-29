@@ -29,75 +29,174 @@ with open(pipeline_path, "rb") as file:
 
 # Page styling
 
-st.markdown(
+st.html(
     """
     <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+    :root {
+        --ink: #17242b;
+        --muted: #617078;
+        --paper: #f6f3ed;
+        --card: #fffdfa;
+        --teal: #0d6b69;
+        --teal-dark: #084b4c;
+        --coral: #e4775d;
+        --gold: #d7a53d;
+        --line: #dce2dc;
+    }
+
+    html, body, [class*="css"], .stMarkdown, p, li, button {
+        font-family: 'Manrope', sans-serif;
+    }
+
+    [data-testid="stAppViewContainer"] {
+        background: #0d1218;
+    }
+
+    .block-container {
+        max-width: 1180px;
+        padding-top: 3rem;
+        padding-bottom: 4rem;
+    }
+
+    .predictor-hero {
+        position: relative;
+        overflow: hidden;
+        padding: 2.8rem 3.2rem;
+        border-radius: 24px;
+        margin-bottom: 2.2rem;
+        background: var(--teal-dark);
+        box-shadow: 0 18px 45px rgba(25, 48, 48, 0.18);
+    }
+
+    .predictor-hero::after {
+        content: '';
+        position: absolute;
+        width: 260px;
+        height: 260px;
+        right: -80px;
+        top: -130px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 50%;
+        box-shadow: 0 0 0 28px rgba(255, 255, 255, 0.04),
+                    0 0 0 56px rgba(255, 255, 255, 0.03);
+    }
+
+    .hero-kicker {
+        position: relative;
+        z-index: 1;
+        color: #f3c86d;
+        font-family: 'DM Mono', monospace;
+        font-size: 0.72rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 0.8rem;
+    }
 
     .main-title {
-        font-size: 36px;
-        font-weight: 700;
-        margin-bottom: 5px;
+        position: relative;
+        z-index: 1;
+        color: #fffdfa;
+        font-size: clamp(2.2rem, 5vw, 4rem);
+        font-weight: 800;
+        letter-spacing: -0.06em;
+        line-height: 1;
+        margin: 0 0 0.9rem;
     }
 
     .subtitle {
-        font-size: 17px;
-        color: #666;
-        margin-bottom: 25px;
+        position: relative;
+        z-index: 1;
+        max-width: 600px;
+        color: #cfe1dc;
+        font-size: 1rem;
+        line-height: 1.7;
+        margin: 0;
     }
 
     .section-title {
-        font-size: 22px;
+        color: #f4f1e8;
+        font-size: 1.55rem;
+        font-weight: 800;
+        letter-spacing: -0.04em;
+        margin: 2rem 0 1rem;
+    }
+
+    [data-testid="stWidgetLabel"] p {
+        color: #d7e3df !important;
         font-weight: 600;
-        margin-top: 10px;
-        margin-bottom: 15px;
     }
 
-    .result-box {
-        padding: 25px;
-        border-radius: 12px;
-        border: 1px solid #ddd;
-        background-color: #f8f9fa;
-        text-align: center;
-        margin-top: 25px;
+    div[data-baseweb="select"] > div,
+    div[data-testid="stNumberInput"] input {
+        border: 1px solid #44545a;
+        border-radius: 9px;
+        background: #17242b;
+        color: #f4f1e8;
     }
 
-    .result-label {
-        font-size: 16px;
-        color: #666;
-        margin-bottom: 5px;
+    div[data-baseweb="select"] > div:hover,
+    div[data-testid="stNumberInput"] input:focus {
+        border-color: var(--gold);
     }
 
-    .result-price {
-        font-size: 32px;
-        font-weight: 700;
+    .stButton > button {
+        min-height: 3rem;
+        border: 1px solid var(--coral);
+        border-radius: 10px;
+        background: var(--coral);
+        color: #fff;
+        font-weight: 800;
+        transition: background 160ms ease, transform 160ms ease;
+    }
+
+    .stButton > button:hover {
+        border-color: #c95e48;
+        background: #c95e48;
+        color: #fff;
+        transform: translateY(-1px);
+    }
+
+    [data-testid="stAlert"] {
+        border-radius: 14px;
+        border: 1px solid rgba(215, 165, 61, 0.55);
+        background: #263c3b;
+        color: #fffdfa;
+        margin-top: 1.5rem;
+    }
+
+    @media (max-width: 640px) {
+        .block-container { padding-top: 1.25rem; }
+        .predictor-hero { padding: 2.3rem 1.5rem; border-radius: 20px; }
+        .main-title { font-size: 2.65rem; }
     }
 
     </style>
-    """,
-    unsafe_allow_html=True
+    """
 )
 
 
 # Page heading
 
-st.markdown(
-    '<div class="main-title">🏠 Karachi Property Price Predictor</div>',
-    unsafe_allow_html=True
-)
-
-st.markdown(
-    '<div class="subtitle">'
-    'Enter the property details below to estimate its market price.'
-    '</div>',
-    unsafe_allow_html=True
+st.html(
+    """
+    <div class="predictor-hero">
+        <div class="hero-kicker">Karachi property intelligence · price model</div>
+        <div class="main-title">Find the price a property deserves.</div>
+        <div class="subtitle">
+            Add the property's location, size, and features to get a model-based
+            estimate with a practical price range.
+        </div>
+    </div>
+    """
 )
 
 
 # Basic property details
 
-st.markdown(
+st.html(
     '<div class="section-title">Property Information</div>',
-    unsafe_allow_html=True
 )
 
 col1, col2, col3 = st.columns(3)
@@ -150,9 +249,8 @@ with col3:
 
 # Property features
 
-st.markdown(
+st.html(
     '<div class="section-title">Property Features</div>',
-    unsafe_allow_html=True
 )
 
 col1, col2, col3, col4 = st.columns(4)
@@ -194,9 +292,8 @@ with col4:
 
 # Additional details
 
-st.markdown(
+st.html(
     '<div class="section-title">Additional Features</div>',
-    unsafe_allow_html=True
 )
 
 col1, col2, col3, col4 = st.columns(4)
