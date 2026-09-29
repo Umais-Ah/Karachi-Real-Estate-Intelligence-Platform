@@ -24,10 +24,151 @@ st.set_page_config(
     layout="wide"
 )
 
-st.header("🗺️ Karachi Real Estate Map")
+st.html(
+    """
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
 
-st.caption(
-    "Explore Karachi real-estate prices by location and sub-location."
+    :root {
+        --ink: #17242b;
+        --muted: #617078;
+        --teal: #0d6b69;
+        --teal-dark: #084b4c;
+        --coral: #e4775d;
+        --gold: #d7a53d;
+        --line: #dce2dc;
+    }
+
+    html, body, [class*="css"], .stMarkdown, p, li, button {
+        font-family: 'Manrope', sans-serif;
+    }
+
+    [data-testid="stAppViewContainer"] {
+        background: #0d1218;
+    }
+
+    .block-container {
+        max-width: 1240px;
+        padding-top: 3rem;
+        padding-bottom: 4rem;
+    }
+
+    .analytics-hero {
+        position: relative;
+        overflow: hidden;
+        padding: 2.8rem 3.2rem;
+        border-radius: 24px;
+        margin-bottom: 2.2rem;
+        background: var(--teal-dark);
+        box-shadow: 0 18px 45px rgba(25, 48, 48, 0.18);
+    }
+
+    .analytics-hero::after {
+        content: '';
+        position: absolute;
+        width: 280px;
+        height: 280px;
+        right: -90px;
+        top: -140px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 50%;
+        box-shadow: 0 0 0 28px rgba(255, 255, 255, 0.04),
+                    0 0 0 56px rgba(255, 255, 255, 0.03);
+    }
+
+    .hero-kicker {
+        position: relative;
+        z-index: 1;
+        color: #f3c86d;
+        font-family: 'DM Mono', monospace;
+        font-size: 0.72rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 0.8rem;
+    }
+
+    .analytics-hero h1 {
+        position: relative;
+        z-index: 1;
+        color: #fffdfa;
+        font-size: clamp(2.2rem, 5vw, 4rem);
+        font-weight: 800;
+        letter-spacing: -0.06em;
+        line-height: 1;
+        margin: 0 0 0.9rem;
+    }
+
+    .analytics-hero p {
+        position: relative;
+        z-index: 1;
+        max-width: 650px;
+        color: #cfe1dc;
+        font-size: 1rem;
+        line-height: 1.7;
+        margin: 0;
+    }
+
+    h1, h2, h3, h4 {
+        color: #f4f1e8 !important;
+        letter-spacing: -0.04em;
+    }
+
+    [data-testid="stWidgetLabel"] p {
+        color: #d7e3df !important;
+        font-weight: 600;
+    }
+
+    div[data-baseweb="select"] > div,
+    div[data-testid="stNumberInput"] input {
+        border: 1px solid #44545a;
+        border-radius: 9px;
+        background: #17242b;
+        color: #f4f1e8;
+    }
+
+    div[data-baseweb="select"] > div:hover,
+    div[data-testid="stNumberInput"] input:focus {
+        border-color: var(--gold);
+    }
+
+    [data-testid="stSidebar"] {
+        background: #111b21;
+        border-right: 1px solid #2c3b40;
+    }
+
+    [data-testid="stSidebar"] h2,
+    [data-testid="stSidebar"] h3 {
+        color: #f4f1e8 !important;
+    }
+
+    [data-testid="stCaptionContainer"] p {
+        color: #aebfc0;
+    }
+
+    [data-testid="stAlert"] {
+        border-radius: 14px;
+    }
+
+    @media (max-width: 640px) {
+        .block-container { padding-top: 1.25rem; }
+        .analytics-hero { padding: 2.3rem 1.5rem; border-radius: 20px; }
+        .analytics-hero h1 { font-size: 2.65rem; }
+    }
+    </style>
+    """
+)
+
+st.html(
+    """
+    <div class="analytics-hero">
+        <div class="hero-kicker">Karachi property intelligence · market view</div>
+        <h1>See where Karachi property value is moving.</h1>
+        <p>
+            Compare districts, locations, and sub-locations through interactive
+            maps and market metrics built from real property listings.
+        </p>
+    </div>
+    """
 )
 
 
