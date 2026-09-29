@@ -54,6 +54,30 @@ st.html(
         background: #0d1218;
     }
 
+    [data-testid="stSidebar"] {
+        background: #111b21;
+        border-right: 1px solid #2c3b40;
+    }
+
+    [data-testid="stSidebar"] [data-testid="stSidebarNav"] {
+        padding-top: 1.2rem;
+    }
+
+    [data-testid="stSidebar"] a {
+        color: #aebfc0;
+        border-radius: 8px;
+    }
+
+    [data-testid="stSidebar"] a:hover {
+        background: #1b3033;
+        color: #f4f1e8;
+    }
+
+    [data-testid="stSidebar"] a[aria-current="page"] {
+        background: #0d6b69;
+        color: #fffdfa;
+    }
+
     .block-container {
         max-width: 1180px;
         padding-top: 3rem;
