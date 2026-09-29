@@ -2,7 +2,7 @@ streamlit
 pandas
 numpy
 scikit-learn
-pydeck
+category_encoders
 matplotlib
 plotly
-seaborn
+pydeck
