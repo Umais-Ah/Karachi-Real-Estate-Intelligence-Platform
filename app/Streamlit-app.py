@@ -1,4 +1,11 @@
+import base64
+from pathlib import Path
+
 import streamlit as st
+
+
+asset_path = Path(__file__).resolve().parent / "assets" / "Karachi-image.png"
+asset_data = base64.b64encode(asset_path.read_bytes()).decode("ascii")
 
 # ============================================================
 # PAGE CONFIGURATION
@@ -79,6 +86,10 @@ st.html(
     .hero {
         position: relative;
         overflow: hidden;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        align-items: center;
         padding: 4.4rem 4.5rem 4rem;
         border-radius: 28px;
         margin-bottom: 2.3rem;
@@ -99,6 +110,24 @@ st.html(
         box-shadow: 0 0 0 34px rgba(255, 255, 255, 0.04),
                     0 0 0 68px rgba(255, 255, 255, 0.03);
         pointer-events: none;
+    }
+
+    .hero-copy,
+    .hero-image {
+        position: relative;
+        z-index: 1;
+    }
+
+    .hero-image img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 360px;
+        object-fit: contain;
+        background: #0a3c3e;
+        border: 1px solid rgba(255, 255, 255, 0.24);
+        border-radius: 18px;
+        box-shadow: 0 16px 30px rgba(0, 0, 0, 0.24);
     }
 
     .hero-kicker {
@@ -248,7 +277,9 @@ st.html(
     @media (max-width: 640px) {
         .block-container { padding-top: 1.25rem; }
         .hero { padding: 2.5rem 1.5rem 2.3rem; border-radius: 20px; }
+        .hero { grid-template-columns: 1fr; gap: 1.8rem; }
         .hero h1 { font-size: 2.7rem; }
+        .hero-image img { max-height: 210px; }
         .section-title { font-size: 1.85rem; }
         .card { height: auto; min-height: 0; }
         .pipeline { height: auto; min-height: 0; }
@@ -263,19 +294,25 @@ st.html(
 # ============================================================
 
 st.html(
-    """
+    f"""
     <div class="hero">
 
-        <div class="hero-kicker">Karachi property intelligence · 2026</div>
+        <div class="hero-copy">
+            <div class="hero-kicker">Karachi property intelligence · 2026</div>
 
-        <h1>Make a smarter move in Karachi real estate.</h1>
+            <h1>Make a smarter move in Karachi real estate.</h1>
 
-        <p>
-            Explore the market, estimate a fair price, and find properties
-            that fit the way you actually want to live.
-        </p>
+            <p>
+                Explore the market, estimate a fair price, and find properties
+                that fit the way you actually want to live.
+            </p>
 
-        <div class="hero-note">One place for market context, machine learning, and better shortlists.</div>
+            <div class="hero-note">One place for market context, machine learning, and better shortlists.</div>
+        </div>
+
+        <div class="hero-image">
+            <img src="data:image/png;base64,{asset_data}" alt="Karachi real estate" />
+        </div>
 
     </div>
     """
