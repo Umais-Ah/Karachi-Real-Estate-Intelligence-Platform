@@ -163,7 +163,8 @@ st.html(
     }
 
     .card {
-        min-height: 310px;
+        height: 400px;
+        box-sizing: border-box;
         padding: 1.8rem 1.75rem 1.65rem;
         border: 1px solid var(--line);
         border-radius: 18px;
@@ -211,7 +212,8 @@ st.html(
     }
 
     .pipeline {
-        min-height: 175px;
+        height: 175px;
+        box-sizing: border-box;
         padding: 1.3rem 1.25rem;
         border: 1px solid var(--line);
         border-radius: 15px;
@@ -248,7 +250,8 @@ st.html(
         .hero { padding: 2.5rem 1.5rem 2.3rem; border-radius: 20px; }
         .hero h1 { font-size: 2.7rem; }
         .section-title { font-size: 1.85rem; }
-        .card { min-height: auto; }
+        .card { height: auto; min-height: 0; }
+        .pipeline { height: auto; min-height: 0; }
     }
     </style>
     """
@@ -444,51 +447,47 @@ st.markdown(
 col1, col2, col3, col4 = st.columns(4)
 
 with col1:
-    st.markdown(
+    st.html(
         """
         <div class="pipeline">
             <div class="pipeline-number">01</div>
             <h4>Raw Data</h4>
             <p>Real estate listings collected from Karachi.</p>
         </div>
-        """,
-        unsafe_allow_html=True
+        """
     )
 
 with col2:
-    st.markdown(
+    st.html(
         """
         <div class="pipeline">
             <div class="pipeline-number">02</div>
             <h4>Data Cleaning</h4>
             <p>Missing values, duplicates, and inconsistencies are handled.</p>
         </div>
-        """,
-        unsafe_allow_html=True
+        """
     )
 
 with col3:
-    st.markdown(
+    st.html(
         """
         <div class="pipeline">
             <div class="pipeline-number">03</div>
             <h4>Feature Engineering</h4>
             <p>Relevant features are created and prepared for analysis.</p>
         </div>
-        """,
-        unsafe_allow_html=True
+        """
     )
 
 with col4:
-    st.markdown(
+    st.html(
         """
         <div class="pipeline">
             <div class="pipeline-number">04</div>
             <h4>AI & Analytics</h4>
             <p>Machine learning and analytical methods generate insights.</p>
         </div>
-        """,
-        unsafe_allow_html=True
+        """
     )
 
 
