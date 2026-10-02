@@ -80,7 +80,7 @@ st.html(
 
     .block-container {
         max-width: 1180px;
-        padding-top: 3rem;
+        padding-top: 4rem;
         padding-bottom: 4rem;
     }
 
@@ -191,7 +191,7 @@ st.html(
     }
 
     @media (max-width: 640px) {
-        .block-container { padding-top: 1.25rem; }
+        .block-container { padding-top: 2rem; }
         .predictor-hero {
             padding: 1.8rem 1.25rem;
             border-radius: 18px;

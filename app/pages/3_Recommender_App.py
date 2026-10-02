@@ -43,7 +43,7 @@ st.html(
 
     .block-container {
         max-width: 1240px;
-        padding-top: 3rem;
+        padding-top: 4rem;
         padding-bottom: 4rem;
     }
 
@@ -167,7 +167,7 @@ st.html(
     [data-testid="stAlert"] { border-radius: 14px; }
 
     @media (max-width: 640px) {
-        .block-container { padding-top: 1.25rem; }
+        .block-container { padding-top: 2rem; }
         .recommender-hero {
             padding: 1.8rem 1.25rem;
             border-radius: 18px;
