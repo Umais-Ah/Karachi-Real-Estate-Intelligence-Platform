@@ -312,19 +312,22 @@ col1, col2, col3, col4 = st.columns(4)
 with col1:
     bathrooms = st.selectbox(
         "Bathrooms",
-        sorted(df["bathrooms"].dropna().unique().tolist())
+        sorted(df["bathrooms"].dropna().unique().tolist()),
+        format_func=lambda value: str(int(value))
     )
 
 with col2:
     kitchen = st.selectbox(
         "Kitchen",
-        sorted(df["kitchen"].dropna().unique().tolist())
+        sorted(df["kitchen"].dropna().unique().tolist()),
+        format_func=lambda value: str(int(value))
     )
 
 with col3:
     total_floors = st.selectbox(
         "Total Floors",
-        sorted(df["total_floors"].dropna().unique().tolist())
+        sorted(df["total_floors"].dropna().unique().tolist()),
+        format_func=lambda value: str(int(value))
     )
 
 with col4:
@@ -390,7 +393,8 @@ with col1:
 with col2:
     furnished = st.selectbox(
         "Furnished",
-        sorted(df["furnished"].dropna().unique().tolist())
+        sorted(df["furnished"].dropna().unique().tolist()),
+        format_func=lambda value: "Yes" if int(value) == 1 else "No"
     )
 
 with col3:
@@ -428,7 +432,8 @@ col1, col2 = st.columns(2)
 with col1:
     electricity_backup = st.selectbox(
         "Electricity Backup",
-        sorted(df["electricity_backup"].dropna().unique().tolist())
+        sorted(df["electricity_backup"].dropna().unique().tolist()),
+        format_func=lambda value: "Yes" if int(value) == 1 else "No"
     )
 
 with col2:
