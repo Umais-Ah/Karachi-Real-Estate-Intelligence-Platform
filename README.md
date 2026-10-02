@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- 🖼️ TOP BANNER: save your banner as docs/images/banner.png (recommended size: 1280 x 320 px) -->
-<img src="docs/images/banner.png" alt="Karachi Real Estate Intelligence Platform banner" width="100%">
+<img src="app/assets/Karachi-image.png" alt="Karachi Real Estate Intelligence Platform banner" width="100%">
 
 # 🏙️ Karachi Real Estate Intelligence Platform
 
