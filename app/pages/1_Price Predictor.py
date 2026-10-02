@@ -247,14 +247,22 @@ with col2:
         )
     )
 
+    sub_location_values = (
+        df[df["location"] == location]["sub_location"]
+        .dropna()
+        .unique()
+        .tolist()
+    )
+
+    if location == "Gulshan-e-Iqbal Town":
+        sub_location_values = [
+            value for value in sub_location_values
+            if str(value).casefold() != "gadap"
+        ]
+
     sub_location = st.selectbox(
         "Sub Location",
-        sorted(
-            df[df["location"] == location]["sub_location"]
-            .dropna()
-            .unique()
-            .tolist()
-        )
+        sorted(sub_location_values)
     )
 
 with col3:
@@ -308,9 +316,20 @@ with col4:
         "Not Applicable"
     ]
 
+    floor_labels = {
+        "Ground Floor": "Ground Floor (0)",
+        "Low Floor": "Low Floor (1-3)",
+        "Mid Floor": "Mid Floor (4-7)",
+        "High Floor": "High Floor (8-15)",
+        "Very High Floor": "Very High Floor (16+)",
+        "Unknown": "Unknown",
+        "Not Applicable": "Not Applicable"
+    }
+
     floor_category = st.selectbox(
         "Floor Category",
-        floor_order
+        floor_order,
+        format_func=lambda value: floor_labels[value]
     )
 
 
@@ -331,9 +350,18 @@ with col1:
         "Old"
     ]
 
+    age_labels = {
+        "Under Construction": "Under Construction (< 0 years)",
+        "New": "New (0 years)",
+        "Relatively New": "Relatively New (1-5 years)",
+        "Moderately Old": "Moderately Old (6-10 years)",
+        "Old": "Old (> 10 years)"
+    }
+
     age_category = st.selectbox(
         "Age Category",
-        age_order
+        age_order,
+        format_func=lambda value: age_labels[value]
     )
 
 with col2:
@@ -343,9 +371,26 @@ with col2:
     )
 
 with col3:
+    parking_order = [
+        "No Parking",
+        "Basic Parking",
+        "Good Parking",
+        "Premium Parking",
+        "Luxury Parking"
+    ]
+
+    parking_labels = {
+        "No Parking": "No Parking (0)",
+        "Basic Parking": "Basic Parking (1)",
+        "Good Parking": "Good Parking (2)",
+        "Premium Parking": "Premium Parking (3-4)",
+        "Luxury Parking": "Luxury Parking (5+)"
+    }
+
     parking_category = st.selectbox(
         "Parking",
-        sorted(df["parking_category"].dropna().unique().tolist())
+        parking_order,
+        format_func=lambda value: parking_labels[value]
     )
 
 with col4:
