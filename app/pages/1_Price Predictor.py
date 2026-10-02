@@ -223,7 +223,7 @@ st.html(
     '<div class="section-title">Property Information</div>',
 )
 
-col1, col2, col3 = st.columns(3)
+col1, col2, col3, col4 = st.columns(4)
 
 with col1:
     property_type = st.selectbox(
@@ -291,9 +291,13 @@ with col3:
 
     area = area_input if area_unit == "Square Feet" else area_input * 9
 
+with col4:
+    bedroom_values = sorted(df["bedrooms"].dropna().unique().tolist())
+
     bedrooms = st.selectbox(
         "Bedrooms",
-        sorted(df["bedrooms"].dropna().unique().tolist())
+        bedroom_values,
+        format_func=lambda value: str(int(value))
     )
 
 
