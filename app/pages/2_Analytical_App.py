@@ -147,8 +147,41 @@ st.html(
 
     @media (max-width: 640px) {
         .block-container { padding-top: 1.25rem; }
-        .analytics-hero { padding: 2.3rem 1.5rem; border-radius: 20px; }
-        .analytics-hero h1 { font-size: 2.65rem; }
+        .analytics-hero {
+            padding: 1.8rem 1.25rem;
+            border-radius: 18px;
+            margin-bottom: 1.5rem;
+        }
+        .analytics-hero::after {
+            width: 190px;
+            height: 190px;
+            right: -75px;
+            top: -95px;
+        }
+        .hero-kicker {
+            font-size: 0.62rem;
+            line-height: 1.4;
+            margin-bottom: 0.65rem;
+        }
+        .analytics-hero h1 {
+            font-size: 2.2rem;
+            line-height: 1.04;
+            letter-spacing: -0.03em;
+            margin-bottom: 0.75rem;
+        }
+        .analytics-hero p {
+            font-size: 0.9rem;
+            line-height: 1.55;
+        }
+    }
+
+    @media (max-width: 400px) {
+        .analytics-hero {
+            padding: 1.5rem 1rem;
+        }
+        .analytics-hero h1 {
+            font-size: 2rem;
+        }
     }
     </style>
     """
