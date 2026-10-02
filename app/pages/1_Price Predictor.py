@@ -274,16 +274,16 @@ with col2:
     )
 
 with col3:
-    area_unit = st.selectbox(
-        "Area Unit",
-        ["Square Feet", "Square Yards"]
-    )
-
     area_input = st.number_input(
         "Area",
         min_value=1,
         value=1500,
         step=100
+    )
+
+    area_unit = st.selectbox(
+        "Area Unit",
+        ["Square Feet", "Square Yards"]
     )
 
     area = area_input if area_unit == "Square Feet" else area_input * 9
