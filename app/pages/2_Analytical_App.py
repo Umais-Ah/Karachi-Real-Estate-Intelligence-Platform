@@ -151,6 +151,7 @@ st.html(
             padding: 1.8rem 1.25rem;
             border-radius: 18px;
             margin-bottom: 1.5rem;
+            margin-top: 1rem;
         }
         .analytics-hero::after {
             width: 190px;
@@ -162,6 +163,7 @@ st.html(
             font-size: 0.62rem;
             line-height: 1.4;
             margin-bottom: 0.65rem;
+            overflow-wrap: anywhere;
         }
         .analytics-hero h1 {
             font-size: 2.2rem;
