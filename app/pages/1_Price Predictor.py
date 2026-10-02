@@ -427,7 +427,7 @@ with col4:
     )
 
 
-col1, col2 = st.columns(2)
+col1, col2, col3, col4 = st.columns(4)
 
 with col1:
     electricity_backup = st.selectbox(
@@ -437,6 +437,14 @@ with col1:
     )
 
 with col2:
+    st.write("")
+    st.write("")
+
+with col3:
+    st.write("")
+    st.write("")
+
+with col4:
     st.write("")
     st.write("")
 
