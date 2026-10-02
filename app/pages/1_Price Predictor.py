@@ -281,9 +281,12 @@ with col3:
         step=100
     )
 
-    area_unit = st.selectbox(
+    area_unit = st.segmented_control(
         "Area Unit",
-        ["Square Feet", "Square Yards"]
+        ["Square Feet", "Square Yards"],
+        default="Square Feet",
+        selection_mode="single",
+        label_visibility="collapsed"
     )
 
     area = area_input if area_unit == "Square Feet" else area_input * 9
