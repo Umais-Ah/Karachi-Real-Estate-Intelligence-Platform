@@ -312,8 +312,7 @@ with col4:
         "Mid Floor",
         "High Floor",
         "Very High Floor",
-        "Unknown",
-        "Not Applicable"
+        "Unknown"
     ]
 
     floor_labels = {
@@ -322,15 +321,17 @@ with col4:
         "Mid Floor": "Mid Floor (4-7)",
         "High Floor": "High Floor (8-15)",
         "Very High Floor": "Very High Floor (16+)",
-        "Unknown": "Unknown",
-        "Not Applicable": "Not Applicable"
+        "Unknown": "Unknown"
     }
 
-    floor_category = st.selectbox(
-        "Floor Category",
-        floor_order,
-        format_func=lambda value: floor_labels[value]
-    )
+    if property_type == "House":
+        floor_category = "Not Applicable"
+    else:
+        floor_category = st.selectbox(
+            "Floor Category",
+            floor_order,
+            format_func=lambda value: floor_labels[value]
+        )
 
 
 # Additional details
