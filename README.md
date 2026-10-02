@@ -1,5 +1,8 @@
 <div align="center">
 
+<!-- 🖼️ TOP BANNER: save your banner as docs/images/banner.png (recommended size: 1280 x 320 px) -->
+<img src="docs/images/banner.png" alt="Karachi Real Estate Intelligence Platform banner" width="100%">
+
 # 🏙️ Karachi Real Estate Intelligence Platform
 
 **Predict prices. Explore the market. Find the right property.**
@@ -13,24 +16,63 @@ An end-to-end machine-learning and analytics web app built on 20,000+ Karachi pr
 ![PyDeck](https://img.shields.io/badge/PyDeck-3D%20Maps-0A66C2)
 ![Jupyter](https://img.shields.io/badge/Jupyter-Notebooks-F37626?logo=jupyter&logoColor=white)
 
-[Features](#-features) · [How It Works](#-how-it-works) · [Quick Start](#-quick-start) · [Project Structure](#-project-structure) · [Roadmap](#-roadmap)
+[Demo Video](#-demo-video) · [Screenshots](#-application-preview) · [Features](#-features) · [How It Works](#-how-it-works) · [Quick Start](#-quick-start) · [Roadmap](#-roadmap)
 
 </div>
 
 ---
 
+## 🎬 Demo Video
+
 <!--
-📸 ADD SCREENSHOTS HERE (recommended – they make the biggest difference on GitHub)
-Save images in a folder such as docs/screenshots/ and uncomment:
+🎥 DEMO VIDEO: choose ONE option.
+
+OPTION A (recommended): clickable thumbnail that opens your YouTube / Drive video.
+  1. Save a thumbnail as docs/images/video-thumbnail.png
+  2. Replace YOUR_VIDEO_LINK below with your video URL.
+
+OPTION B: upload the video directly to GitHub.
+  1. Edit this README on github.com and drag your .mp4 file into the editor.
+  2. GitHub generates a link; paste it on its own line here and it will play inline.
+     (Delete the Option A block below if you use this.)
+-->
 
 <div align="center">
-  <img src="docs/screenshots/price-predictor.png" width="32%" alt="Price Predictor">
-  <img src="docs/screenshots/analytics.png" width="32%" alt="Market Analytics">
-  <img src="docs/screenshots/recommender.png" width="32%" alt="Recommender">
+
+[![Watch the demo video](docs/images/video-thumbnail.png)](YOUR_VIDEO_LINK)
+
+▶️ **Click the image above to watch the full demo**
+
+🔗 **Live app:** _add your deployed Streamlit link here_
+
 </div>
 
-🔗 Live demo: add your deployed Streamlit link here
--->
+---
+
+## 📸 Application Preview
+
+<!-- 🖼️ Save each screenshot in docs/images/ using the exact file names below. -->
+
+<div align="center">
+
+### 🏠 Landing Page
+<img src="docs/images/landing-page.png" alt="Landing page" width="90%">
+
+### 💰 Price Predictor
+<img src="docs/images/price-predictor.png" alt="Price Predictor page" width="90%">
+
+### 📊 Market Analytics
+<img src="docs/images/market-analytics.png" alt="Market Analytics page" width="90%">
+
+### 🗺️ Interactive and 3D Maps
+<img src="docs/images/maps-3d.png" alt="Interactive and 3D property maps" width="90%">
+
+### 🎯 Property Recommender
+<img src="docs/images/recommender.png" alt="Property Recommender page" width="90%">
+
+</div>
+
+---
 
 ## 📖 About
 
@@ -242,6 +284,8 @@ The app opens in your browser with the landing page and navigation to all three 
 │   └── recommender.py              # Filtering, scoring, ranking, distance
 ├── notebooks/                      # Cleaning, EDA, feature engineering, modeling
 ├── scraper/                        # Flat and house scraping notebooks
+├── docs/
+│   └── images/                     # README banner, screenshots, video thumbnail
 └── requirements.txt
 ```
 
