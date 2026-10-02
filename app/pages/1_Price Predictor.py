@@ -280,6 +280,11 @@ with col2:
             value for value in location_values
             if str(value).casefold() != "gadap"
         ]
+    elif district == "Korangi":
+        location_values = [
+            value for value in location_values
+            if str(value).casefold() != "jamshed town"
+        ]
 
     location = st.selectbox(
         "Location",
