@@ -237,14 +237,22 @@ with col1:
     )
 
 with col2:
+    location_values = (
+        df[df["district"] == district]["location"]
+        .dropna()
+        .unique()
+        .tolist()
+    )
+
+    if district == "Karachi East":
+        location_values = [
+            value for value in location_values
+            if str(value).casefold() != "gadap"
+        ]
+
     location = st.selectbox(
         "Location",
-        sorted(
-            df[df["district"] == district]["location"]
-            .dropna()
-            .unique()
-            .tolist()
-        )
+        sorted(location_values)
     )
 
     sub_location_values = (
