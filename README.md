@@ -1,6 +1,5 @@
 <div align="center">
 
-<!-- 🖼️ TOP BANNER: save your banner as docs/images/banner.png (recommended size: 1280 x 320 px) -->
 <img src="app/assets/Karachi-image.png" alt="Karachi Real Estate Intelligence Platform banner" width="100%">
 
 # 🏙️ Karachi Real Estate Intelligence Platform
@@ -9,41 +8,52 @@
 
 An end-to-end machine-learning and analytics web app built on 20,000+ Karachi property listings.
 
-![Python](https://img.shields.io/badge/Python-3.9%2B-3776AB?logo=python&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B?logo=streamlit&logoColor=white)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-Pipeline-F7931E?logo=scikit-learn&logoColor=white)
-![Plotly](https://img.shields.io/badge/Plotly-Charts-3F4F75?logo=plotly&logoColor=white)
-![PyDeck](https://img.shields.io/badge/PyDeck-3D%20Maps-0A66C2)
-![Jupyter](https://img.shields.io/badge/Jupyter-Notebooks-F37626?logo=jupyter&logoColor=white)
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.9%2B-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.9+">
+  <img src="https://img.shields.io/badge/Streamlit-App-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit">
+  <img src="https://img.shields.io/badge/scikit--learn-Pipeline-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="scikit-learn">
+  <br>
+  <img src="https://img.shields.io/badge/Plotly-Charts-3F4F75?style=for-the-badge&logo=plotly&logoColor=white" alt="Plotly">
+  <img src="https://img.shields.io/badge/PyDeck-3D%20Maps-0A66C2?style=for-the-badge&logo=mapbox&logoColor=white" alt="PyDeck">
+  <img src="https://img.shields.io/badge/Jupyter-Notebooks-F37626?style=for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter">
+</p>
 
-[Demo Video](#-demo-video) · [Screenshots](#-application-preview) · [Features](#-features) · [How It Works](#-how-it-works) · [Quick Start](#-quick-start) · [Roadmap](#-roadmap)
+[**🚀 Live App**](https://karachi-real-estate-intelligence-platform-efuxjzdeqygvpqjmm4bm.streamlit.app/) ·
+[Demo Video](#-demo-video) ·
+[Screenshots](#-application-preview) ·
+[Features](#-features) ·
+[How It Works](#-how-it-works) ·
+[Quick Start](#-quick-start) ·
+[Roadmap](#-roadmap)
 
 </div>
 
 ---
 
+## 📑 Table of Contents
+
+- [Demo Video](#-demo-video)
+- [Application Preview](#-application-preview)
+- [About](#-about)
+- [Features](#-features)
+- [How It Works](#-how-it-works)
+- [App Modules](#-app-modules)
+- [Quick Start](#-quick-start)
+- [Tech Stack](#-tech-stack)
+- [Project Structure](#-project-structure)
+- [Limitations](#-limitations)
+- [Roadmap](#-roadmap)
+- [Contributing](#-contributing)
+
+---
+
 ## 🎬 Demo Video
 
-<!--
-🎥 DEMO VIDEO: choose ONE option.
-
-OPTION A (recommended): clickable thumbnail that opens your YouTube / Drive video.
-  1. Save a thumbnail as docs/images/video-thumbnail.png
-  2. Replace YOUR_VIDEO_LINK below with your video URL.
-
-OPTION B: upload the video directly to GitHub.
-  1. Edit this README on github.com and drag your .mp4 file into the editor.
-  2. GitHub generates a link; paste it on its own line here and it will play inline.
-     (Delete the Option A block below if you use this.)
--->
+https://github.com/user-attachments/assets/68945489-7005-4fdd-9b98-fc528b1e885f
 
 <div align="center">
 
-[![Watch the demo video](docs/images/video-thumbnail.png)](YOUR_VIDEO_LINK)
-
-▶️ **Click the image above to watch the full demo**
-
-🔗 **Live app:** _add your deployed Streamlit link here_
+🔗 **Try it live:** [Karachi Real Estate Intelligence Platform](https://karachi-real-estate-intelligence-platform-efuxjzdeqygvpqjmm4bm.streamlit.app/)
 
 </div>
 
@@ -51,24 +61,36 @@ OPTION B: upload the video directly to GitHub.
 
 ## 📸 Application Preview
 
-<!-- 🖼️ Save each screenshot in docs/images/ using the exact file names below. -->
-
 <div align="center">
 
 ### 🏠 Landing Page
-<img src="docs/images/landing-page.png" alt="Landing page" width="90%">
+<img width="1914" height="892" alt="Landing page" src="https://github.com/user-attachments/assets/60b50386-22b0-40b6-8510-122024e74a03" />
 
 ### 💰 Price Predictor
-<img src="docs/images/price-predictor.png" alt="Price Predictor page" width="90%">
+<img width="1920" height="1080" alt="Price Predictor page" src="https://github.com/user-attachments/assets/605f14ac-01cb-4080-9acf-184a89b7c567" />
 
 ### 📊 Market Analytics
-<img src="docs/images/market-analytics.png" alt="Market Analytics page" width="90%">
 
-### 🗺️ Interactive and 3D Maps
-<img src="docs/images/maps-3d.png" alt="Interactive and 3D property maps" width="90%">
+**3D & 2D Spatial Maps (PyDeck)**
+<img width="910" height="761" alt="District price per sqft map" src="https://github.com/user-attachments/assets/df1e481f-3870-4245-8a1b-58805c14b407" />
+
+**Radar / Spider Chart**
+<img width="970" height="951" alt="District fingerprint radar chart" src="https://github.com/user-attachments/assets/fa50d715-ac0b-4ec4-8641-092de29a1e97" />
+
+**Pie Chart**
+<img width="1098" height="553" alt="Bedroom configuration pie chart" src="https://github.com/user-attachments/assets/af1068cd-8b3d-43b3-a5ef-0c538d810f76" />
+
+**Scatter Plot**
+<img width="1045" height="818" alt="Area vs price scatter plot" src="https://github.com/user-attachments/assets/2e6afffa-db2a-4570-89e6-fa2ff3a56e7e" />
+
+**Box Plot**
+<img width="1008" height="774" alt="Property distribution box plot" src="https://github.com/user-attachments/assets/a56e4e70-f8a8-4fc0-ab7e-f16c55abbf2b" />
+
+**Distribution Plot**
+<img width="1066" height="653" alt="Price distribution plot" src="https://github.com/user-attachments/assets/ea4f792b-c200-4756-b95f-a6690ddf95de" />
 
 ### 🎯 Property Recommender
-<img src="docs/images/recommender.png" alt="Property Recommender page" width="90%">
+<img width="1920" height="1080" alt="Property Recommender page" src="https://github.com/user-attachments/assets/13850ad4-5139-4353-aa11-ae35ba8d8f06" />
 
 </div>
 
@@ -88,13 +110,13 @@ Property prices in Karachi vary hugely by district, society, and sub-location, a
 
 ## ✨ Features
 
-- **Full data-science lifecycle**: scraping → cleaning → EDA → modeling → deployment
-- **Large real-world dataset**: 20,000+ flat and house listings, cleaned separately and then merged
-- **Karachi-specific location standardization**: inconsistent area names mapped into parent locations and sub-locations
+- **Full data-science lifecycle:** scraping → cleaning → EDA → modeling → deployment
+- **Large real-world dataset:** 20,000+ flat and house listings, cleaned separately and then merged
+- **Karachi-specific location standardization:** inconsistent area names mapped into parent locations and sub-locations
 - **Price prediction** through a reusable scikit-learn pipeline, with an estimated price range
 - **Interactive analytics** with Plotly charts and PyDeck 2D/3D maps
 - **Explainable recommender** using transparent weighted scoring
-- **Flexible units**: supports square feet and square yards
+- **Flexible units:** supports square feet and square yards
 
 ---
 
@@ -197,18 +219,27 @@ If a user leaves some preferences blank, the active weights are rebalanced autom
 
 </details>
 
-<details>
+<details open>
 <summary><b>📊 Analytical App</b> — <code>app/pages/2_Analytical_App.py</code></summary>
 
 <br>
 
-- Analyze by **district**, **location**, or **sub-location**
-- Metrics: median price, median price per sqft, listing count, median area
-- Interactive and 3D maps (PyDeck), district comparisons, price and area distributions, and property-type comparisons (Plotly)
+Analyze the market by **district**, **location**, or **sub-location**. Headline metrics include median price, median price per sqft, listing count, and median area. Each visualization answers a different question:
+
+| # | Visualization | Chart type | What it shows | Question it answers |
+|---|---|---|---|---|
+| 1 | **District Price per Sqft Geomap** | PyDeck map (2D and 3D skyline) | Median price per sqft by area, drawn as colored markers on a heat scale (roughly 7,000 to 36,000 PKR/sqft in the current data) | Where are the high- and low-value zones of the city? |
+| 2 | **District Fingerprint Comparison** | Radar / spider chart | Selected districts on five normalized (0–1) axes: price, area, bedrooms, bathrooms, price per sqft | How do districts compare across several metrics at once? |
+| 3 | **Area vs. Price** | Scatter plot | Individual listings with area (sqft) on the x-axis and price (PKR) on the y-axis, grouped by bedroom count | How does price scale with size, and which listings look like outliers? |
+| 4 | **BHK Distribution** | Pie chart | Share of listings by bedroom configuration (2-BHK, 3-BHK, 4-BHK, and so on) for the chosen location | Which unit sizes dominate supply in this area? |
+| 5 | **Property Distribution** | Box plot | Price (in crore PKR) grouped by district or property type | How do spread and median differ between districts? |
+| 6 | **Distribution Analysis** | Histogram / KDE | Frequency distribution of a selected numeric variable such as price | How is the market skewed, concentrated, or varied? |
+
+> Values on the map scale reflect the current dataset and will shift as listings are refreshed.
 
 </details>
 
-<details>
+<details open>
 <summary><b>🎯 Recommender App</b> — <code>app/pages/3_Recommender_App.py</code></summary>
 
 <br>
@@ -319,7 +350,7 @@ The app opens in your browser with the landing page and navigation to all three 
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome. Feel free to open an issue or submit a pull request.
+Contributions, issues, and feature requests are welcome. Open an issue or submit a pull request.
 
 ## 📜 Data Notice
 
