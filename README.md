@@ -359,11 +359,6 @@ Listing data was collected from Zameen.com for educational and research purposes
 ## 📄 License
 
 Add your license here (e.g. MIT).
-
-## 👤 Author
-
-**Your Name** · [GitHub](https://github.com/your-username) · [LinkedIn](https://linkedin.com/in/your-profile)
-
 ---
 
 <div align="center">
