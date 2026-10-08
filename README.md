@@ -352,15 +352,6 @@ The app opens in your browser with the landing page and navigation to all three 
 
 Contributions, issues, and feature requests are welcome. Open an issue or submit a pull request.
 
-## 📜 Data Notice
-
-Listing data was collected from Zameen.com for educational and research purposes. Please review the website's terms of use before scraping or redistributing data.
-
-## 📄 License
-
-Add your license here (e.g. MIT).
----
-
 <div align="center">
 
 ⭐ If you found this project useful, consider giving it a star!
